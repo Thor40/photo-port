@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import photo from '../../assets/small/commercial/0.jpg';
 
@@ -7,6 +7,11 @@ function Gallery(props) {
         name: "commerical",
         description: "Photos of grocery stores, food trucks, and other commercial projects",
     };
+
+    useEffect(() => {
+        document.title = capitalizeFirstLetter(currentCategory.name);
+      }, [currentCategory]);
+
     return (
         <section>
             <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
