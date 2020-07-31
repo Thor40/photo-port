@@ -19,11 +19,11 @@ function App() {
 
   return (
     <div>
-      <Nav>
+      <Nav
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
-      </Nav>
+      ></Nav>
       <main>
         <Gallery currentCategory={currentCategory}></Gallery>
         <About></About>

@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PhotoList from '../PhotoList';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Gallery({ currentCategory }) {
   const { name, description } = currentCategory;
 
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentCategory.name);
-  }, [currentCategory]);
+
 
   return (
     <section>
